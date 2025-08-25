@@ -15,6 +15,7 @@ public:
 
     // 可选：初始化方法
     void SetInitialData();
+    void AddItemToListBox(LPCTSTR lpszItem);
 
 protected:
     virtual void DoDataExchange(CDataExchange* pDX);
@@ -22,10 +23,9 @@ protected:
 
 	CStatic m_staticLabel; // 示例控件
     CListBox m_listBox;
+    CLISTBOX1 m_listBoxActiveX;
 
     DECLARE_MESSAGE_MAP()
-
-    CLISTBOX1 m_listBoxActiveX;
 
 private:
     void AddActiveXItem(CLISTBOX1& listBox, LPCTSTR lpszText);

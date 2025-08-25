@@ -186,6 +186,7 @@
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="CLISTBOX1.h" />
     <ClInclude Include="CMyFormView.h" />
+    <ClInclude Include="CMyRightFormView.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LeftView.h" />
     <ClInclude Include="MainFrm.h" />
@@ -200,6 +201,7 @@
     <ClCompile Include="ChildFrm.cpp" />
     <ClCompile Include="CLISTBOX1.cpp" />
     <ClCompile Include="CMyFormView.cpp" />
+    <ClCompile Include="CMyRightFormView.cpp" />
     <ClCompile Include="LeftView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MFCApplicationZcc1.cpp" />

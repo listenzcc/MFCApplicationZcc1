@@ -96,3 +96,13 @@ void CMyFormView::AddActiveXItem(CLISTBOX1& listBox, LPCTSTR lpszText)
 	COleVariant varIndex(index);
     listBox.AddItem(varItem, varIndex);
 }
+
+void CMyFormView::AddItemToListBox(LPCTSTR lpszItem)
+{
+    CListBox* pListBox = (CListBox*)GetDlgItem(IDC_LIST2);
+    if (pListBox && pListBox->GetSafeHwnd())
+    {
+        pListBox->AddString(lpszItem);
+        pListBox->Invalidate();
+    }
+}

@@ -51,6 +51,9 @@
     <ClInclude Include="CLISTBOX1.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CMyRightFormView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MFCApplicationZcc1.cpp">
@@ -78,6 +81,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CLISTBOX1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CMyRightFormView.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

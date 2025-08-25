@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include "CMyFormView.h"
+
 
 class CMFCApplicationZcc1Doc : public CDocument
 {
@@ -14,6 +16,8 @@ protected: // 仅从序列化创建
 
 // 特性
 public:
+	void AddItemToListBox(LPCTSTR lpszItem);
+	CMyFormView* GetMyFormView(); // 获取FormView指针
 
 // 操作
 public:

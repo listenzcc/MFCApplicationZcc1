@@ -136,3 +136,26 @@ void CMFCApplicationZcc1Doc::Dump(CDumpContext& dc) const
 
 
 // CMFCApplicationZcc1Doc 命令
+void CMFCApplicationZcc1Doc::AddItemToListBox(LPCTSTR lpszItem)
+{
+	CMyFormView* pFormView = GetMyFormView();
+	if (pFormView && pFormView->GetSafeHwnd())
+	{
+		pFormView->AddItemToListBox(lpszItem);
+	}
+}
+
+CMyFormView* CMFCApplicationZcc1Doc::GetMyFormView()
+{
+	// 获取第一个视图
+	POSITION pos = GetFirstViewPosition();
+	while (pos != NULL)
+	{
+		CView* pView = GetNextView(pos);
+		if (pView->IsKindOf(RUNTIME_CLASS(CMyFormView)))
+		{
+			return (CMyFormView*)pView;
+		}
+	}
+	return NULL;
+}

@@ -10,6 +10,7 @@
 #include "LeftView.h"
 #include "MFCApplicationZcc1View.h"
 #include "CMyFormView.h"
+#include "CMyRightFormView.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -38,12 +39,13 @@ CChildFrame::~CChildFrame()
 BOOL CChildFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/, CCreateContext* pContext)
 {
 	// 创建拆分器窗口
-	if (!m_wndSplitter.CreateStatic(this, 1, 3))
+	if (!m_wndSplitter.CreateStatic(this, 1, 4))
 		return FALSE;
 
 	if (!m_wndSplitter.CreateView(0, 0, RUNTIME_CLASS(CLeftView), CSize(200, 100), pContext) ||
 		!m_wndSplitter.CreateView(0, 1, RUNTIME_CLASS(CMFCApplicationZcc1View), CSize(100, 100), pContext)||
-		!m_wndSplitter.CreateView(0, 2, RUNTIME_CLASS(CMyFormView), CSize(100, 100), pContext)
+		!m_wndSplitter.CreateView(0, 2, RUNTIME_CLASS(CMyFormView), CSize(500, 100), pContext) ||
+		!m_wndSplitter.CreateView(0, 3, RUNTIME_CLASS(CMyRightFormView), CSize(100, 100), pContext)
 		)
 	{
 		m_wndSplitter.DestroyWindow();
